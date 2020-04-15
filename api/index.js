@@ -2,7 +2,7 @@ const express = require("express")
 const router = express.Router()
 
 var scraperapiClient = require('scraperapi-sdk')('9fc23c9cd30b55b102aca2ad7b379b07')
-var response = await scraperapiClient.get('http://httpbin.org/ip')
+var response =  scraperapiClient.get('https://rabiel.dev/')
 
 
 router.get('/', (req, res, next) => {
@@ -10,5 +10,5 @@ router.get('/', (req, res, next) => {
         message :response
     })
 })
-
+console.log(response)
 module.exports = router
